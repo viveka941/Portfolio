@@ -1,6 +1,7 @@
 // src/components/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import { MovingBorderDemo } from "./MovingBorderDemo";
 
 const Services = ({ darkMode }) => {
   const services = [
@@ -58,7 +59,7 @@ const Services = ({ darkMode }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            My Services
+            <MovingBorderDemo text={"My Services"} />
           </motion.h2>
           <motion.div
             className={`w-24 h-1 mx-auto rounded-full ${

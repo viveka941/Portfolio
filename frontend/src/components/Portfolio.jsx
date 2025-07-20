@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "./Hero";
+import { MovingBorderDemo } from "./MovingBorderDemo";
 
 const Portfolio = ({ darkMode }) => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -78,7 +79,8 @@ const Portfolio = ({ darkMode }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            My Portfolio
+            {" "}
+            <MovingBorderDemo text={" My Portfolio"} />
           </motion.h2>
           <motion.div
             className={`w-24 h-1 mx-auto rounded-full ${
@@ -166,11 +168,7 @@ const Portfolio = ({ darkMode }) => {
                 </p>
 
                 <div className="mt-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                  
-                  >
+                  <a href={project.link} target="_blank">
                     <button
                       className={`text-sm font-medium ${
                         darkMode

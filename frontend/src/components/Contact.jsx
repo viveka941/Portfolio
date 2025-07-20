@@ -1,6 +1,7 @@
 // src/components/Contact.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { MovingBorderDemo } from "./MovingBorderDemo";
 
 const Contact = ({ darkMode }) => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ const Contact = ({ darkMode }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Get In Touch
+            <MovingBorderDemo text={" Get In Touch"} />
           </motion.h2>
           <motion.div
             className={`w-24 h-1 mx-auto rounded-full ${

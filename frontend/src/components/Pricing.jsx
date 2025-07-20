@@ -1,13 +1,14 @@
 // src/components/Pricing.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import { MovingBorderDemo } from "./MovingBorderDemo";
 
 const Pricing = ({ darkMode }) => {
   const plans = [
     {
       id: 1,
       name: "Basic",
-      price: 49,
+      price: 2000,
       period: "per hour",
       features: [
         "UI Design",
@@ -20,7 +21,7 @@ const Pricing = ({ darkMode }) => {
     {
       id: 2,
       name: "Standard",
-      price: 89,
+      price: 10000,
       period: "per hour",
       features: [
         "UI/UX Design",
@@ -34,7 +35,7 @@ const Pricing = ({ darkMode }) => {
     {
       id: 3,
       name: "Premium",
-      price: 149,
+      price: 20000,
       period: "per hour",
       features: [
         "UI/UX Design",
@@ -65,7 +66,7 @@ const Pricing = ({ darkMode }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Pricing Plans
+            <MovingBorderDemo text={"Pricing Plans"} />
           </motion.h2>
           <motion.div
             className={`w-24 h-1 mx-auto rounded-full ${
@@ -130,7 +131,7 @@ const Pricing = ({ darkMode }) => {
                       : "text-gray-900"
                   }`}
                 >
-                  ${plan.price}
+                  ₹{plan.price}
                 </span>
                 <span
                   className={`ml-2 ${

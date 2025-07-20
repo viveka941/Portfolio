@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MovingBorderDemo } from "./MovingBorderDemo";
 
-
 const Hero = ({ darkMode }) => {
   return (
     <section
@@ -14,11 +13,12 @@ const Hero = ({ darkMode }) => {
           : "bg-gradient-to-br from-gray-50 to-gray-100"
       }`}
     >
-      {/* Decorative elements */}
+      {/* Decorative Background Blobs */}
       <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-indigo-500/10 blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-64 h-64 rounded-full bg-purple-500/10 blur-3xl"></div>
 
       <div className="container mx-auto px-4 md:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,11 +32,10 @@ const Hero = ({ darkMode }) => {
           >
             Hello, I'm{" "}
             <span>
-              {" "}
-              <MovingBorderDemo text={"Vivek kumar chaurasiya"}
-                                />
+              <MovingBorderDemo text={"Vivek Kumar Chaurasiya"} />
             </span>
           </h3>
+
           <motion.h1
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 ${
               darkMode ? "text-white" : "text-gray-900"
@@ -68,6 +67,7 @@ const Hero = ({ darkMode }) => {
             user-centered design and modern development practices.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             className="flex flex-wrap gap-4"
             initial={{ opacity: 0 }}
@@ -77,29 +77,31 @@ const Hero = ({ darkMode }) => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-8 py-3 rounded-lg font-medium ${
+              className={`px-8 py-3 rounded-lg font-medium text-white ${
                 darkMode
                   ? "bg-indigo-600 hover:bg-indigo-700"
-                  : "bg-indigo-600 hover:bg-indigo-700 text-white"
+                  : "bg-indigo-600 hover:bg-indigo-700"
               }`}
             >
               View Portfolio
             </motion.button>
-            <motion.button
+
+            <motion.a
+              href="july.pdf"
+              download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-8 py-3 rounded-lg font-medium border ${
+              className={`px-8 py-3 rounded-lg font-medium border text-center ${
                 darkMode
                   ? "border-gray-700 text-gray-300 hover:bg-gray-800"
                   : "border-gray-300 text-gray-700 hover:bg-gray-100"
               }`}
             >
-             <a href="july.pdf" download>
-              <button>Download Resume</button>
-             </a>
-            </motion.button>
+              Download Resume
+            </motion.a>
           </motion.div>
 
+          {/* Client Trust */}
           <div className="mt-12 flex items-center">
             <div className="flex -space-x-3 mr-4">
               {[1, 2, 3].map((item) => (
@@ -107,7 +109,7 @@ const Hero = ({ darkMode }) => {
                   key={item}
                   className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden"
                 >
-                  <img src="vivek1.jpg" alt="" />
+                  <img src="vivek1.jpg" alt={`Client ${item}`} />
                 </div>
               ))}
             </div>
@@ -123,6 +125,7 @@ const Hero = ({ darkMode }) => {
           </div>
         </motion.div>
 
+        {/* Right Content */}
         <motion.div
           className="order-1 lg:order-2 relative"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -137,12 +140,12 @@ const Hero = ({ darkMode }) => {
             ></div>
             <div className="relative rounded-2xl overflow-hidden border-8 border-white shadow-2xl">
               <div
-                className="border-2  rounded-xl w-full h-96 lg:h-[800px] bg-cover bg-center"
+                className="border-2 rounded-xl w-full h-96 lg:h-[800px] bg-cover bg-center"
                 style={{ backgroundImage: "url('/m1.jpg')" }}
               ></div>
             </div>
 
-            {/* Floating elements */}
+            {/* Floating Elements */}
             <motion.div
               className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-full flex items-center justify-center shadow-lg ${
                 darkMode ? "bg-indigo-600" : "bg-indigo-500"
@@ -150,8 +153,10 @@ const Hero = ({ darkMode }) => {
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 3 }}
             >
-              <span className="text-white font-bold">5+</span>
-              <span className="text-white text-xs ml-1">Years</span>
+              <div className="text-center">
+                <span className="text-white font-bold text-lg">5+</span>
+                <div className="text-white text-xs">Years</div>
+              </div>
             </motion.div>
 
             <motion.div
@@ -161,7 +166,7 @@ const Hero = ({ darkMode }) => {
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 4, delay: 0.5 }}
             >
-              <span className="text-white font-bold">120+</span>
+              <span className="text-white font-bold text-lg">120+</span>
               <span className="text-white text-xs">Projects</span>
             </motion.div>
           </div>
