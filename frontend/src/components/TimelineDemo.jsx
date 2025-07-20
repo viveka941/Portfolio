@@ -45,7 +45,7 @@ export function TimelineDemo({ darkMode }) {
       ),
     },
     {
-      title: "Fub-2025",
+      title: "February-2025",
       content: (
         <div>
           <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl px-2">
