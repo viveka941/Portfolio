@@ -74,7 +74,8 @@ const Hero = ({ darkMode }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.7 }}
           >
-            <motion.button
+            <motion.a
+              href="#portfolio"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-8 py-3 rounded-lg font-medium text-white ${
@@ -84,7 +85,7 @@ const Hero = ({ darkMode }) => {
               }`}
             >
               View Portfolio
-            </motion.button>
+            </motion.a>
 
             <motion.a
               href="july.pdf"
