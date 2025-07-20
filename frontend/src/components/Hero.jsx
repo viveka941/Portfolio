@@ -155,7 +155,7 @@ const Hero = ({ darkMode }) => {
               transition={{ repeat: Infinity, duration: 3 }}
             >
               <div className="text-center">
-                <span className="text-white font-bold text-lg">5+</span>
+                <span className="text-white font-bold text-lg">2+</span>
                 <div className="text-white text-xs">Years</div>
               </div>
             </motion.div>
@@ -167,7 +167,7 @@ const Hero = ({ darkMode }) => {
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 4, delay: 0.5 }}
             >
-              <span className="text-white font-bold text-lg">120+</span>
+              <span className="text-white font-bold text-lg">12+</span>
               <span className="text-white text-xs">Projects</span>
             </motion.div>
           </div>
